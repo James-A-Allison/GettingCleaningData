@@ -68,7 +68,7 @@ large_table <- rbind(test, train)
 loop_data <- data.frame()
 tidy_data <- data.frame()
 
-for (i in 4:49) {
+for (i in 4:69) {
   loop_data <- aggregate(large_table[,i], list(large_table$person, large_table$exercise), FUN = mean)
   colnames(loop_data) <- c("person", "exercise", colnames(large_table)[i])
   
